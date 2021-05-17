@@ -1,0 +1,47 @@
+<material-drawer persistent #drawer="drawer"
+                 [class.custom-width]="customWidth"
+                 [attr.end]="end ? '' : null">
+    <material-list *deferredContent>
+        <div group class="mat-drawer-spacer"></div>
+        <div group>
+            <material-list-item>
+                <material-icon icon="inbox"></material-icon>
+                Stock
+            </material-list-item>
+<!--            <material-list-item>-->
+<!--                <material-icon icon="star"></material-icon>-->
+<!--                Ingreso-->
+<!--            </material-list-item>-->
+<!--            <material-list-item>-->
+<!--                <material-icon icon="send"></material-icon>-->
+<!--                Salida-->
+<!--            </material-list-item>-->
+            <material-list-item>
+                <material-icon icon="drafts"></material-icon>
+                Contacto
+            </material-list-item>
+        </div>
+    </material-list>
+</material-drawer>
+<div class="material-content">
+    <header class="material-header shadow">
+        <div class="material-header-row">
+            <material-button icon
+                             class="material-drawer-button" (trigger)="drawer.toggle()">
+                <material-icon icon="menu"></material-icon>
+            </material-button>
+            <span class="material-header-title">Control de Inventario</span>
+            <div class="material-spacer"></div>
+            <nav class="material-navigation">
+                <a href="http://www.digitala.cl" type="">Digítala</a>
+            </nav>
+            <nav class="material-navigation">
+                <a>Salir</a>
+            </nav>
+        </div>
+    </header>
+    <div>
+        <stock-component></stock-component>
+    </div>
+
+</div>
